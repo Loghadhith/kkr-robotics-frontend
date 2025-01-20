@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import hands from "@/assets/hands.jpeg"
-import rocket from "@/assets/rocket.jpeg"
-import telescope from "@/assets/telescope.jpeg"
+import hands from "@/assets/hands.png"
+import rocket from "@/assets/rocket.gif"
+import telescope from "@/assets/telescope.gif"
 
 const Page = () => {
   return (
