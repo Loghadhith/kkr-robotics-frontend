@@ -16,6 +16,7 @@ const Header = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
+      className="relative z-20"
     >
       <nav>
         <ul
