@@ -29,7 +29,7 @@ const Header = () => {
             justifyContent: "center", // Centers content on smaller screens
           }}
         >
-          <li style={{ margin: "0.5rem 1rem" }}>
+          <li style={{ margin: "0.5rem 0.5rem" }}>
             <a href="/" style={{ textDecoration: "none", color: "black" }}>
               HOME
             </a>
