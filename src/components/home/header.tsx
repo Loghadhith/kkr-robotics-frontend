@@ -18,7 +18,7 @@ const Hero = () => {
             </button>
           </div>
           
-          <div className="w-3/5 flex items-center justify-center overflow-visible">
+          <div className="w-3/5 hidden items-center justify-center overflow-visible md:block sm:blocks">
             <img 
               src={robot.src}
               alt="Robot" 

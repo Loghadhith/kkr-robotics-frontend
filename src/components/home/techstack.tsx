@@ -1,8 +1,8 @@
 import React from 'react';
-import image1 from '../assets/ROS.png'; // Replace with actual image paths
-import image2 from '../assets/Raspbeery.png';
-import image3 from '../assets/Arduino.png';
-import image4 from '../assets/iot.png';
+import image1 from '@/assets/ROS.png'; // Replace with actual image paths
+import image2 from '@/assets/Raspbeery.png';
+import image3 from '@/assets/Arduino.png';
+import image4 from '@/assets/iot.png';
 
 const Techstack = () => {
   return (

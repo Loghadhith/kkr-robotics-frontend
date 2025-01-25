@@ -1,5 +1,4 @@
 import React from 'react';
-import workshop from '../assets/workshop.png';
 import internship from "@/assets/internship.png";
 import bg from '@/assets/dust.png';
 

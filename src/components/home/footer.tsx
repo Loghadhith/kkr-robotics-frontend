@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Calendar, User, HeadphonesIcon } from 'lucide-react';
 import logo from "@/assets/logo.png"

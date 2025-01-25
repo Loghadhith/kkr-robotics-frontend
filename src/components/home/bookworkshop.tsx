@@ -1,5 +1,5 @@
 import React from 'react';
-import workshop from '../assets/workshop.png';
+import workshop from '@/assets/workshop.png';
 import bg from "@/assets/dust.png";
 
 const Bookworkshops = () => {

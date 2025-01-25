@@ -32,9 +32,9 @@ const JoinOurCommunity = () => {
                 
           </p>
           <div className="mt-6">
-            <button className="bg-[#0EE20E] hover:bg-green-700 text-black font-bold py-2 px-4 rounded">
+            <a href="/community" className="bg-[#0EE20E] hover:bg-green-700 text-white font-bold py-3 px-5 rounded-full ">
               Join With Us
-            </button>
+            </a>
           </div>
         </div>
 
