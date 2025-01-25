@@ -58,7 +58,7 @@ const Page = () => {
 
 
         <div
-          className="absolute max-w-full h-[200px] top-[-10%]"
+          className="absolute min-w-full h-[200px] top-[-10%]"
         >
           <div
             className="relative right-[50%] h-[180px] bg-gradient-to-l from-[#50D210] to-[#50D210] z-[-2] shadow-md"
