@@ -1,11 +1,6 @@
-const Header = () => {
+import Link from 'next/link'
 
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "News", href: "/news" },
-    { name: "Contact", href: "/contact" },
-  ];
+const Header = () => {
 
   return (
     <header
@@ -30,9 +25,9 @@ const Header = () => {
           }}
         >
           <li style={{ margin: "0.5rem 0.5rem" }}>
-            <a href="/" style={{ textDecoration: "none", color: "black" }}>
+            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
               HOME
-            </a>
+            </Link>
           </li>
           <li style={{ margin: "0.5rem 1rem" }}>
             <a href="/about" style={{ textDecoration: "none", color: "black" }}>

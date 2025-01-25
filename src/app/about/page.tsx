@@ -76,8 +76,7 @@ const Page = () => {
           <div className="w-full pr-16 lg:w-1/2">
             <h2 className="text-6xl font-bold mb-4">Our Vision</h2>
             <p className="text-xl text-gray-600">
-              Our mission is to revolutionize homes and industries with cutting-edge robotic technology that enhances and automates everyday tasks, ensuring improved safety, productivity, and ease of use. We offer exceptional services, including autonomous robots, IoT projects, workshops, and mentorship, all tailored to meet our customers' needs at budget-friendly prices. Our e-commerce platform provides affordable access to robotic components, making technology more accessible. Additionally, we aim to ignite the passion of enthusiasts through mentorship, empowering them to explore and excel in the world of robotics.
-            </p>
+            Our mission is to revolutionize homes and industries with cutting-edge robotic technology that enhances and automates everyday tasks, ensuring improved safety, productivity, and ease of use. We offer exceptional services, including autonomous robots, IoT projects, workshops, and mentorship, all tailored to meet our customers&apos; needs at budget-friendly prices. Our e-commerce platform provides affordable access to robotic components, making technology more accessible. Additionally, we aim to ignite the passion of enthusiasts through mentorship, empowering them to explore and excel in the world of robotics.            </p>
           </div>
           <div className="relative w-fit left-[6%] rounded-full p-8 flex items-center justify-center shadow-md sm:top-[100%]">
             <Image
