@@ -4,7 +4,7 @@ const RookiesCommunityCTA: React.FC = () => {
     return (
         <>
         <div className="bg-black text-white py-12 px-6 sm:px-12">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Let's Create Rookies Community!!!</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Let&apos;s Create Rookies Community!!!</h1>
             <p className="mb-8">
                 Join Our Robotics & E-Commerce Community For The Latest Technologies, Expert Discussions, And Convenient Shopping.
             </p>
