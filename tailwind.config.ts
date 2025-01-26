@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      boxShadow: {
+        'above': '0px -5px 15px rgba(0, 0, 0, 0.3)', // Shadow above the div
+      },
     },
   },
   plugins: [],
