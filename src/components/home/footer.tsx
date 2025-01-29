@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] text-white">
+    <footer className="bg-[#202020] py-32 text-white">
       {/* Newsletter Section */}
       <div className="border-b border-gray-700">
         <div className="container mx-auto px-4 py-12 text-center">

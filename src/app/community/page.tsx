@@ -1,4 +1,4 @@
-import RookiesCommunityCTA from '@/components/community/summa'
+import RookiesCommunityCTA from '@/components/community/rookiescommunity'
 import React from 'react'
 
 function Community() {
