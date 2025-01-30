@@ -22,7 +22,7 @@ const RookiesCommunity: React.FC = () => {
         <div className="min-h-screen bg-[#202020]">
             <div className="w-full bg-white py-32 px-4">
                 <p className="text-[300px] md:text-4xl font-bold text-center mb-4">
-                    Let's Create Rookies Community!!!
+                    Let&apos;s Create Rookies Community!!!
                 </p>
                 <p className="text-center text-gray-700 max-w-full mx-auto text-2xl pb-10">
                     Join Our Robotics E-Commerce Community For The Latest Technologies, Expert Discussions, And Convenient Shopping.
