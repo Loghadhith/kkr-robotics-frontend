@@ -40,7 +40,9 @@ const whykrr=()=> {
                 alt="Robotics GIF"
                 width={343}
                 height={80}
-                className="max-w-full h-auto rounded-full"/>
+                className="max-w-full h-auto rounded-full"
+                unoptimized
+                />
             </div>
           </div>
           <div className="bg-[#50D210] p-6 rounded-lg shadow-md text-center w-[365px] h-[480px]">

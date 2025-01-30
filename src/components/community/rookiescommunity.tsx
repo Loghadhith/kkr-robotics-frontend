@@ -66,7 +66,7 @@ const RookiesCommunity: React.FC = () => {
                                         alt="Book Stack Illustration"
                                         width={999}
                                         height={999}
-                                        objectFit="contain" 
+                                        style={{ objectFit: 'contain' }} 
                                         className="rounded-lg -mt-[330px]" 
                                     />
                                 </div>
