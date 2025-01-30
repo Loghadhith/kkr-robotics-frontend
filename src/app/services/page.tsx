@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import iotstudent from "@/assets/big-iot-student.png"
+import iotstudent from "@/assets/iot-student.png"
 import mentorship from "@/assets/mentorship.png"
-import walle from "@/assets/wall-E.png"
-import robot from "@/assets/robot.png"
+import robot from "@/assets/robots.png"
 
 const Sections = () => {
   return (
@@ -20,7 +19,7 @@ const Sections = () => {
             </div>
             {/* Right Column (Image) */}
             <div className="flex justify-center">
-              <Image src={walle.src} alt="Robot" width={500} height={500} />
+              <Image src={robot.src} alt="Robot" width={500} height={500} />
             </div>
           </div>
         </div>
@@ -32,7 +31,7 @@ const Sections = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column (Image) */}
             <div className="flex justify-center">
-              <Image src="/path-to-your-image.jpg" alt="Robot" width={500} height={500} />
+              <Image src={iotstudent.src} alt="Robot" width={500} height={500} />
             </div>
             {/* Right Column (Paragraph) */}
             <div>
@@ -58,7 +57,7 @@ const Sections = () => {
             </div>
             {/* Right Column (Image) */}
             <div className="flex justify-center">
-              <Image src="/path-to-your-image.jpg" alt="Robot" width={500} height={500} />
+              <Image src={mentorship.src} alt="Robot" width={500} height={500} />
             </div>
           </div>
         </div>

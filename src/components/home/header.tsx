@@ -1,5 +1,5 @@
 import React from 'react';
-import robot from "@/assets/robot.png";
+import robot from "@/assets/robots.png";
 import vector from '@/assets/Logo/Vector.svg';
 import bgImage from '@/assets/LooperBG.svg'; // Import your SVG background here
 
