@@ -10,7 +10,8 @@ const Hero = () => {
       style={{
         backgroundImage: `url(${bgImage.src})`,
         backgroundSize: 'fit',
-        backgroundRepeat : "no-repeat"
+        backgroundRepeat : "no-repeat",
+        
       }}
     >
       <div className="container px-4 relative">

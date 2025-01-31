@@ -18,7 +18,7 @@ const Navbar = () => {
         justifyContent: "center",
         alignItems: "center",
       }}
-      className="relative z-20"
+      className="relative z-40"
     >
       {/* Large Screen Navbar */}
       <h1 className="absolute left-6 text-xl font-bold"><Image alt="Logo"  className="h-24 w-24" src={Logo}/></h1>
