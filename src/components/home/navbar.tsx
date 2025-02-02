@@ -49,8 +49,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/shop" style={{ textDecoration: "none", color: "black" }}>
-              SHOP
+            <Link href="/community" style={{ textDecoration: "none", color: "black" }}>
+              COMMUNITY
             </Link>
           </li>
           <li style={{ margin: "0.5rem 1rem" }}>
@@ -59,8 +59,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/updates" style={{ textDecoration: "none", color: "black" }}>
-              UPDATES
+            <Link href="/contacts" style={{ textDecoration: "none", color: "black" }}>
+              CONTACTS
             </Link>
           </li>
         </ul>
@@ -101,14 +101,14 @@ const Navbar = () => {
           <Link href="/products" onClick={() => setIsMenuOpen(false)} className="hover:underline">
             PRODUCTS
           </Link>
-          <Link href="/shop" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            SHOP
+          <Link href="/community" onClick={() => setIsMenuOpen(false)} className="hover:underline">
+            COMMUNITY
           </Link>
           <Link href="/services" onClick={() => setIsMenuOpen(false)} className="hover:underline">
             OUR SERVICES
           </Link>
-          <Link href="/updates" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            UPDATES
+          <Link href="/contacts" onClick={() => setIsMenuOpen(false)} className="hover:underline">
+            CONTACTS
           </Link>
         </div>
       )}
