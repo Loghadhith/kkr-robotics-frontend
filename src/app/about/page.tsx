@@ -5,11 +5,8 @@ import hands from "@/assets/hands.png"
 import rocket from "@/assets/rocket.gif"
 import telescope from "@/assets/telescope.gif"
 import explorers from "@/assets/curious_explorers.gif"
-import Team from "@/components/about/TeamCard";
 
 const Page = () => {
-
-  const img_src = ["../../../assets/hands.png", "../../../assets/hands.png"];
 
   return (
     <>
