@@ -1,4 +1,3 @@
-// SceneInit.js
 import * as THREE from 'three';
 
 class SceneInit {

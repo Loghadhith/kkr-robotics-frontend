@@ -8,55 +8,50 @@ const Model = () => {
     const sceneInit = new SceneInit('myThreeJsCanvas');
     sceneInit.initialize();
 
-    // To hold the loaded model reference
     let loadedModel = null;
 
-    // Load the model
     const modelPath = '/bumpy/bumpy.glb';
     const gltfLoader = new GLTFLoader();
 
     gltfLoader.load(modelPath, (gltf) => {
-      loadedModel = gltf.scene; // Assign the model to loadedModel
+      loadedModel = gltf.scene;
 
-      // Initial positioning and scaling (preserved your adjustments)
       loadedModel.position.z = -10;
       loadedModel.position.x = 8;
-      loadedModel.rotation.y = Math.PI / 2 ;
+      loadedModel.rotation.y = Math.PI / 2;
       loadedModel.position.y = -2;
       loadedModel.scale.set(5, 5, 5);
 
-      // Ensure that the model uses its original materials
       loadedModel.traverse((child) => {
         if (child.isMesh) {
-          // If you want to modify the material properties, you can do so like this:
-          child.material.metalness = 0.5; // Example of tweaking metalness
-          child.material.roughness = 0.7; // Example of tweaking roughness
+          child.material.metalness = 0.5;
+          child.material.roughness = 0.7;
         }
       });
 
-      // Add the model to the scene
       sceneInit.scene.add(loadedModel);
     });
 
-    // Add a light source to ensure visibility of the model
-    const light = new THREE.DirectionalLight(0xffffff, 1); // White light
-    light.position.set(10, 10, 10).normalize(); // Light position
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(10, 10, 10).normalize();
     sceneInit.scene.add(light);
 
-    // Optionally, add ambient light for softer lighting
-    const ambientLight = new THREE.AmbientLight(0x404040, 1); // Ambient light
+    const light2 = new THREE.DirectionalLight(0xffffff, 1);
+    light2.position.set(-10, 10, 10).normalize();
+    sceneInit.scene.add(light2);
+
+    const ambientLight = new THREE.AmbientLight(0x404040, 1.5);
     sceneInit.scene.add(ambientLight);
 
-    // Animation loop
     const animate = () => {
       if (loadedModel) {
-        loadedModel.rotation.y += 0.01; // Rotate the model
+        loadedModel.rotation.y += 0.01;
       }
       sceneInit.renderer.render(sceneInit.scene, sceneInit.camera);
       requestAnimationFrame(animate);
     };
 
-    animate(); // Start the animation loop
+    animate();
 
   }, []);
 

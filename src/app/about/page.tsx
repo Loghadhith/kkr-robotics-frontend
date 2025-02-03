@@ -5,8 +5,12 @@ import hands from "@/assets/hands.png"
 import rocket from "@/assets/rocket.gif"
 import telescope from "@/assets/telescope.gif"
 import explorers from "@/assets/curious_explorers.gif"
+import Team from "@/components/about/TeamCard";
 
 const Page = () => {
+
+  const img_src = ["../../../assets/hands.png", "../../../assets/hands.png"];
+
   return (
     <>
       <section className="relative flex flex-col items-center justify-center min-h-screen text-black overflow-x-clip">
@@ -19,7 +23,6 @@ const Page = () => {
               transformOrigin: 'left center',
             }}
           >
-            {/* Optionally add any content inside the ribbon */}
           </div>
         </div>
 
@@ -70,7 +73,6 @@ const Page = () => {
               transformOrigin: 'right center',
             }}
           >
-            {/* Optionally add any content inside the mirrored ribbon */}
           </div>
         </div>
 
@@ -83,7 +85,7 @@ const Page = () => {
           </div>
           <div className="relative w-fit left-[6%] rounded-full p-8 flex items-center justify-center shadow-md sm:top-[100%]">
             <Image
-              src={telescope} // Replace with the correct path to the telescope icon
+              src={telescope}
               alt="Telescope Icon"
               className="rounded-full h-52 w-52"
             />
@@ -103,7 +105,7 @@ const Page = () => {
           <div className="mb-0 lg:mb-4 flex mt-10 justify-end">
             <div className="relative w-fit rounded-full bg-gray-100 p-8 flex items-center justify-center shadow-md">
               <Image
-                src={rocket} // Replace with the correct path to the telescope icon
+                src={rocket}
                 alt="Telescope Icon"
                 className="rounded-full h-52 w-52"
               />
@@ -123,7 +125,6 @@ const Page = () => {
               transformOrigin: 'left center',
             }}
           >
-            {/* Optionally add any content inside the ribbon */}
           </div>
         </div>
 
