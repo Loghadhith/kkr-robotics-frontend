@@ -14,13 +14,12 @@ const Hero = () => {
 
       }}
     >
-      <div className="container px-4 relative">
+      <div className="container px-2 relative">
         <div className="flex items-center justify-center pb-14 gap-36">
-          <div className="z-10 w-2/5">
-            <h1 className="text-6xl font-bold leading-tight mb-8 text-black">
-              Our Autonomous Robots<br />
-              Will Simplify Your<br />
-              Work !
+          <div className="z-10 w-1/2">
+            <h1 className="text-7xl font-bold leading-tight mb-8 text-black -mx-12" dangerouslySetInnerHTML={{
+                        __html:"Our Autonomous Robots<br/> Will Simplify Your<br />Work !"}}>
+              
             </h1>
             <button className="bg-green-500 text-black px-8 py-3 rounded-lg text-lg">
               EXPLORE

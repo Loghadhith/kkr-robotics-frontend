@@ -16,25 +16,25 @@ const AboutServices = () => {
           }}
         />
 
-        <div className="relative py-16">
+        <div className="relative pt-20 pb-80">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">About Us</h2>
-            <div className="flex items-center justify-between gap-8">
-              <div className="w-1/3 relative h-[300px] flex items-center justify-center">
+            <h2 className="text-5xl font-bold text-white text-center mb-40">About Us</h2>
+            <div className="flex items-center justify-between gap-20">
+              <div className="w-1/3 relative h-[500px] flex items-center justify-center -ml-10">
                 <img
                   src={logo.src}
                   alt="KKR Logo"
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <div className="w-2/3 text-white">
-                <h3 className="text-3xl font-bold mb-4">We are here to Change the Future</h3>
-                <p className="text-2xl mb-4">
+              <div className="w-2/3 text-white pl-32">
+                <h3 className="text-5xl font-bold mb-4 text-center">We are here to Change the Future</h3>
+                <p className="text-5xl mb-20 text-center">
                   <span className="text-green-500">I</span>magine -
                   <span className="text-green-500">I</span>nnovate -
                   <span className="text-green-500">I</span>mplement
                 </p>
-                <p className="text-gray-300 text-2xl">
+                <p className="text-gray-300 text-3xl text-center">
                   KarthiKesh Robotics, established on March 22, 2024, integrates
                   robotics and AI into society. Our autonomous robots streamline
                   industrial material handling using advanced sensors and navigation
