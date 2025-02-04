@@ -7,7 +7,6 @@ import rocket from "@/assets/rocket.gif"
 import bgImage from "@/assets/LooperBG.svg"
 import telescope from "@/assets/telescope.gif"
 import explorers from "@/assets/curious_explorers.gif"
-import { Scale } from "lucide-react";
 
 type TeamDetail = Array<{
   name: string;
