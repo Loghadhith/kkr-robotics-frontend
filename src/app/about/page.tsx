@@ -1,12 +1,40 @@
 "use client"
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import hands from "@/assets/hands.png"
 import rocket from "@/assets/rocket.gif"
 import telescope from "@/assets/telescope.gif"
 import explorers from "@/assets/curious_explorers.gif"
 
+type TeamDetail = Array<{
+  name: string;
+  role: string;
+  url: string;
+  instagram: string;
+  linkedin: string;
+}>
+
 const Page = () => {
+
+  const [data, setData] = useState<TeamDetail | null>(null);
+
+  useEffect(() => {
+    const GET = async () => {
+      if (!data) {
+        const res = await fetch("https://raw.githubusercontent.com/Sample-hub-hue/kkr/refs/heads/main/team.json", {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        const html = await res.text();
+        const info = JSON.parse(html);
+        console.log(info);
+        setData(info);
+      }
+    };
+    GET();
+  }, [data])
 
   return (
     <>
@@ -199,6 +227,7 @@ const Page = () => {
             <span className="team-letter">M</span>
           </div>
         </div>
+
 
       </section>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import contact from '@/assets/contact.png';
 
 
 const Contact = () => {
@@ -14,7 +13,7 @@ const Contact = () => {
                 <span className="block">Robotics With <span className="text-[#0EE20E]">KKR</span></span>
               </h3>
               <p className="text-black text-xl md:text-2xl pb-6 md:pb-10">
-                <span className="block">We'd love to hear from you! Whether you have a question about</span>
+                <span className="block">We&apos;d love to hear from you! Whether you have a question about</span>
                 <span className="block">our services, pricing, need a demo, or anything else, our team is</span>
                 <span className="block">ready to answer all your questions.</span>
               </p>
