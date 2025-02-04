@@ -4,8 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import hands from "@/assets/hands.png"
 import rocket from "@/assets/rocket.gif"
+import bgImage from "@/assets/LooperBG.svg"
 import telescope from "@/assets/telescope.gif"
 import explorers from "@/assets/curious_explorers.gif"
+import { Scale } from "lucide-react";
 
 type TeamDetail = Array<{
   name: string;
@@ -39,6 +41,24 @@ const Page = () => {
   return (
     <>
       <section className="relative flex flex-col items-center justify-center min-h-screen text-black overflow-x-clip">
+        <div className="absolute inset-0 w-full h-full z-35 lg:hidden">
+          <Image
+            src={bgImage}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div
+          style={{ transform: 'scaleX(-1)' }}
+          className="absolute top-[30%] right-0 inset-0 w-full h-full z-35 lg:hidden"
+        >
+          <Image
+            src={bgImage}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <div className="max-w-full sm:w-[500px] hidden lg:block">
           <div
             className="absolute top-10 shadow-lg left-[-12%] h-[180px] bg-gradient-to-r from-[#50D210] to-[#50D210] z-[-3]"
@@ -72,7 +92,7 @@ const Page = () => {
         </div>
 
 
-        <div className="absolute top-[-10] right-0 w-[50%] min-h-screen z-0 hidden md:block sm:block">
+        <div className="absolute top-10 right-0 w-[50%] min-h-screen z-0 hidden md:block sm:block">
           <Image
             src={hands}
             alt="Hands Image"
@@ -88,10 +108,20 @@ const Page = () => {
 
 
         <div
+          style={{ transform: 'scaleX(-1)' }}
+          className="absolute right-0 inset-0 w-full h-full z-35 lg:hidden"
+        >
+          <Image
+            src={bgImage}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div
           className="absolute min-w-full h-[200px] top-[-10%] hidden lg:block"
         >
           <div
-            className="relative top-[-110%] right-[50%] h-[180px] bg-gradient-to-l from-[#50D210] to-[#50D210] z-[-2] shadow-above"
+            className="relative top-[-90%] right-[50%] h-[180px] bg-gradient-to-l from-[#50D210] to-[#50D210] z-[-2] shadow-above"
             style={{
               transform: 'rotate(-30deg) scaleX(1)',
               width: '200%',
@@ -120,6 +150,13 @@ const Page = () => {
 
       <section className="relative flex md:flex-row text-right h-[80%] text-black lg:px-16 lg:py-16">
 
+        <div className="absolute inset-0 w-full h-full z-35 lg:hidden">
+          <Image
+            src={bgImage}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="relative flex flex-col max-w-full pr-10 pb-0 lg:pb-10 items-end justify-end mt-20 lg:mt-60 lg:pr-20">
           <div className="lg:w-3/5">
             <h2 className="text-6xl font-bold mb-4 text-right right-0">Our Mission</h2>
@@ -141,9 +178,19 @@ const Page = () => {
 
       <section className="relative flex flex-col items-center justify-between min-h-screen text-black lg:px-36 overflow-x-clip pb-20">
 
+        <div
+          style={{ transform: 'scaleX(-1)' }}
+          className="absolute right-0 inset-0 w-full h-full z-35 lg:hidden"
+        >
+          <Image
+            src={bgImage}
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="max-w-full sm:w-[500px] hidden lg:block">
           <div
-            className="absolute shadow-above top-[-96%] left-[-12%] h-[180px] bg-gradient-to-r from-[#50D210] to-[#50D210] z-[-1]"
+            className="absolute shadow-above top-[-90%] left-[-12%] h-[180px] bg-gradient-to-r from-[#50D210] to-[#50D210] z-[-1]"
             style={{
               transform: 'rotate(30deg)',
               width: '200%',
