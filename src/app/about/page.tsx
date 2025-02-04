@@ -44,7 +44,7 @@ const Page = () => {
         </div>
 
 
-        <div className="absolute top-[-40] right-0 w-[50%] min-h-screen z-0 hidden md:block sm:block">
+        <div className="absolute top-[-10] right-0 w-[50%] min-h-screen z-0 hidden md:block sm:block">
           <Image
             src={hands}
             alt="Hands Image"

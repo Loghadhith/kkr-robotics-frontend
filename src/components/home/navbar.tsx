@@ -1,78 +1,68 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { User, Menu, X } from "lucide-react";
-import Logo from "@/assets/Logo/kkr-logo.png"
+import Logo from "@/assets/Logo/kkr-logo.png";
 import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
-      style={{
-        backgroundColor: "#ffffff",
-        padding: "1rem",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-      className="relative z-40"
+      className={`fixed top-0 left-0 w-full bg-transparent z-50 py-4 flex justify-between items-center transition-all ${
+        isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
     >
+      {/* Logo on the left */}
+      <h1 className="absolute left-6 text-xl font-bold">
+        <Image alt="Logo" className="h-24 w-24" src={Logo} />
+      </h1>
+      
       {/* Large Screen Navbar */}
-      <h1 className="absolute left-6 text-xl font-bold"><Image alt="Logo"  className="h-24 w-24" src={Logo}/></h1>
-      <nav className="hidden md:flex justify-between items-center px-8 py-4">
-        <ul
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            listStyle: "none",
-            margin: 0,
-            padding: 0,
-            justifyContent: "center",
-          }}
-        >
-          <li style={{ margin: "0.5rem 0.5rem" }}>
-            <Link href="/" style={{ textDecoration: "none", color: "black" }}>
-              HOME
-            </Link>
-          </li>
-          <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/about" style={{ textDecoration: "none", color: "black" }}>
-              ABOUT
-            </Link>
-          </li>
-          <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/products" style={{ textDecoration: "none", color: "black" }}>
-              PRODUCTS
-            </Link>
-          </li>
-          <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/community" style={{ textDecoration: "none", color: "black" }}>
-              COMMUNITY
-            </Link>
-          </li>
-          <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/services" style={{ textDecoration: "none", color: "black" }}>
-              OUR SERVICES
-            </Link>
-          </li>
-          <li style={{ margin: "0.5rem 1rem" }}>
-            <Link href="/contacts" style={{ textDecoration: "none", color: "black" }}>
-              CONTACTS
-            </Link>
-          </li>
+      <nav className="hidden md:flex justify-between items-center px-8 py-4 w-full">
+        {/* Create a container for the links with some gap from the logo */}
+        <ul className="flex space-x-[50px] w-full justify-end pr-[90px]">
+          <li><Link href="/" className="group relative text-black hover:text-black no-underline">HOME<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/about" className="group relative text-black hover:text-black no-underline">ABOUT<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/products" className="group relative text-black hover:text-black no-underline">PRODUCTS<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/shops" className="group relative text-black hover:text-black no-underline">SHOPS<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/community" className="group relative text-black hover:text-black no-underline">COMMUNITY<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/services" className="group relative text-black hover:text-black no-underline">OUR SERVICES<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/events" className="group relative text-black hover:text-black no-underline">EVENTS<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
+          <li><Link href="/contacts" className="group relative text-black hover:text-black no-underline">CONTACTS<span className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-green-500 transform scale-x-0 group-hover:scale-x-100 transition-all"></span></Link></li>
         </ul>
+
+        {/* User Icon */}
         <button className="flex items-center justify-center w-10 h-10 rounded-full bg-black text-white">
           <span className="sr-only">User</span><User size={24} color="white" />
-          {/* Placeholder for user icon */}
         </button>
       </nav>
 
       {/* Small Screen Navbar */}
       <nav className="md:hidden flex items-center justify-between px-4 py-3">
-        <h1 className="absolute left-6 text-xl font-bold"><Image alt="Logo"  className="h-12 w-12" src={Logo}/></h1>
+        <h1 className="absolute left-6 text-xl font-bold">
+          <Image alt="Logo" className="h-12 w-12" src={Logo} />
+        </h1>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
@@ -82,7 +72,7 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Slide-In Menu */}
+      {/* Slide-In Menu for Small Screen */}
       {isMenuOpen && (
         <div className="fixed w-screen inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center space-y-6 text-white text-lg md:hidden">
           <button
@@ -92,24 +82,14 @@ const Navbar = () => {
           >
             <X size={32} />
           </button>
-          <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            HOME
-          </Link>
-          <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            ABOUT
-          </Link>
-          <Link href="/products" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            PRODUCTS
-          </Link>
-          <Link href="/community" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            COMMUNITY
-          </Link>
-          <Link href="/services" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            OUR SERVICES
-          </Link>
-          <Link href="/contacts" onClick={() => setIsMenuOpen(false)} className="hover:underline">
-            CONTACTS
-          </Link>
+          <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:underline">HOME</Link>
+          <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:underline">ABOUT</Link>
+          <Link href="/products" onClick={() => setIsMenuOpen(false)} className="hover:underline">PRODUCTS</Link>
+          <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:underline">SHOP</Link>
+          <Link href="/community" onClick={() => setIsMenuOpen(false)} className="hover:underline">COMMUNITY</Link>
+          <Link href="/services" onClick={() => setIsMenuOpen(false)} className="hover:underline">OUR SERVICES</Link>
+          <Link href="/about" onClick={() => setIsMenuOpen(false)} className="hover:underline">EVENTS</Link>
+          <Link href="/contacts" onClick={() => setIsMenuOpen(false)} className="hover:underline">CONTACTS</Link>
         </div>
       )}
     </header>
@@ -117,4 +97,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
