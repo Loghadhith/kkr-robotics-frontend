@@ -34,7 +34,7 @@ const JoinOurCommunity = () => {
               <span className="block">Unite with unified thinkers:</span>
               <span className="block">Join our <span className="text-[#0EE20E]">ROS Community</span>!</span>
             </p>
-            <p className="text-xl md:text-3xl leading-relaxed">
+            <p className="text-xl md:text-3xl leading-relaxed"  >
               <span className="block">Join our ROS Community at</span>
               <span className="block text-[#0EE20E]">Karthikesh Robotics!</span>
               <span className="block">Connect & create projects with fellow</span>

@@ -33,7 +33,7 @@ const Hero = () => {
                 __html:"Our Autonomous Robots<br/> Will Simplify Your<br />Work !"
               }}
             />
-            <button className="bg-green-500 text-black px-8 py-3 rounded-lg text-lg">
+            <button className="bg-[#0EE20E] text-black px-8 py-3 rounded-lg text-lg">
               EXPLORE
             </button>
           </div>

@@ -27,7 +27,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-2 bg-transparent border border-gray-600 rounded text-white w-full"
             />
-            <button type="submit" className="bg-green-500 px-6 py-2 rounded w-full md:w-auto">Subscribe</button>
+            <button type="submit" className="bg-[#0EE20E] px-6 py-2 rounded w-full md:w-auto text-black">Subscribe</button>
           </form>
         </div>
       </div>
