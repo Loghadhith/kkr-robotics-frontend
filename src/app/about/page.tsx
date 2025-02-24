@@ -245,35 +245,56 @@ const Page = () => {
         </div>
 
         <div className="w-full flex items-center justify-center">
-          <p className="w-3/5 text-white text-center text-2xl">KarthiKesh Robotics Private Limited was incorporated on March 22, 2024, under the Companies Act,  2013 (18 of 2013). Our primary focus is on seamlessly integrating robotics and AI technologies into  societal frameworks.</p>
+          <p className="w-full text-white text-center text-2xl lg:w-3/5">KarthiKesh Robotics Private Limited was incorporated on March 22, 2024, under the Companies Act,  2013 (18 of 2013). Our primary focus is on seamlessly integrating robotics and AI technologies into  societal frameworks.</p>
         </div>
 
 
-        <div className="overflow-x-clip">
-          <div
-            style={{
-              position: 'relative',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              color: 'rgba(255, 255, 255, 0.20)',
-              fontFamily: 'Raleway',
-              fontSize: '300px',
-              fontStyle: 'normal',
-              fontWeight: 700,
-              lineHeight: 'normal',
-              letterSpacing: '15px',
-              zIndex: -2,
-            }}
-            className="pt-20 w-[100%] text-center flex justify-center flex-wrap"
-          >
-            <span className="team-letter">T</span>
-            <span className="team-letter">E</span>
-            <span className="team-letter">A</span>
-            <span className="team-letter">M</span>
-          </div>
+        <div
+          style={{
+            position: 'relative',
+            top: '80%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            color: 'rgba(255, 255, 255, 0.20)',
+            fontFamily: 'Raleway',
+            fontSize: '300px',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: 'normal',
+            letterSpacing: '15px',
+            zIndex: -2,
+          }}
+          className="pt-20 lg:pt-60 w-[100%] text-center flex justify-center flex-wrap"
+        >
+          <span className="team-letter">T</span>
+          <span className="team-letter">E</span>
+          <span className="team-letter">A</span>
+          <span className="team-letter">M</span>
         </div>
 
+        <div className="relative flex flex-wrap justify-center">
+          {data?.map((value, index) => (
+            <div key={index} className="relative mb-10 m-8 bg-green-500" style={{ height: 660, width: 500, zIndex: 4 }}>
+              {index % 2 === 0 ? (
+                <div className="absolute" style={{ height: 640, width: 480, zIndex: 10 }}>
+                  <Image
+                    key={index}
+                    src={value.url}
+                    alt={value.name}
+                    layout="fill"
+                    objectFit="fill"
+                    objectPosition="center"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div style={{ height: 640, width: 480, zIndex: 10 }}>
+                  <Image key={index} src={value.url} alt={value.name} layout="fill" objectFit="fill" objectPosition="center" loading="lazy" />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
 
       </section>
 
