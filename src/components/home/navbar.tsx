@@ -5,13 +5,24 @@ import Link from "next/link";
 import { User, Menu, X } from "lucide-react";
 import Logo from "@/assets/Logo/kkr-logo.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isWhite , setWhite] = useState(false);
+
+  const func = (setWhite: React.Dispatch<React.SetStateAction<boolean>>) => {
+    const p = usePathname();
+    setWhite(p==="/events");
+  }
 
   // Handle scroll event
   useEffect(() => {
+    func(setWhite);
+
+    console.log(isWhite);
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);

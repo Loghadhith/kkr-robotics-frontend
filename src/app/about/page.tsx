@@ -7,6 +7,8 @@ import rocket from "@/assets/rocket.gif"
 import bgImage from "@/assets/LooperBG.svg"
 import telescope from "@/assets/telescope.gif"
 import explorers from "@/assets/curious_explorers.gif"
+import topRight from "@/assets/line1.png"
+import bottomRight from "@/assets/line2.png"
 
 type TeamDetail = Array<{
   name: string;
@@ -274,9 +276,10 @@ const Page = () => {
 
         <div className="relative flex flex-wrap justify-center">
           {data?.map((value, index) => (
-            <div key={index} className="relative mb-10 m-8 bg-green-500" style={{ height: 660, width: 500, zIndex: 4 }}>
+            <div key={index} style={{ height: 660, width: 500, zIndex: 4 }} className="relative items-center justify-center mb-10 m-8 sm:h-300 sm:w-260" >
               {index % 2 === 0 ? (
-                <div className="absolute" style={{ height: 640, width: 480, zIndex: 10 }}>
+                <div className="items-center justify-center" style={{ height: 640, width: 480, zIndex: 10 }}>
+                  <Image src={topRight} alt="alt line" height={200} width={200} className="absolute top-[-10] left-[-10]" />
                   <Image
                     key={index}
                     src={value.url}
@@ -288,8 +291,17 @@ const Page = () => {
                   />
                 </div>
               ) : (
-                <div style={{ height: 640, width: 480, zIndex: 10 }}>
-                  <Image key={index} src={value.url} alt={value.name} layout="fill" objectFit="fill" objectPosition="center" loading="lazy" />
+                <div className="relative items-center justify-center" style={{ height: 640, width: 480, zIndex: 10 }}>
+                  <Image src={bottomRight} alt="alt line" height={200} width={200} className="absolute bottom-[-10] left-[-10]" />
+                  <Image
+                    key={index}
+                    src={value.url}
+                    alt={value.name}
+                    layout="fill"
+                    objectFit="fill"
+                    objectPosition="center"
+                    loading="lazy"
+                  />
                 </div>
               )}
             </div>
